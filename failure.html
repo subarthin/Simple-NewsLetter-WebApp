@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Failed to Subscribe</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <style>
+            /* Custom styles */
+            body {
+                background: linear-gradient(to bottom , #f56565, #9f7aea);
+            }
+            
+            .jumbotron {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 1rem;
+                padding: 4rem;
+                text-align: center;
+                margin: 5rem auto;
+                max-width: 600px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+                color: #111827;
+                font-weight: 600;
+            }
+            
+            .lead {
+                font-size: 1.25rem;
+                color: #4B5563;
+                margin-top: 1.5rem;
+            }
+            
+            /* Animation */
+             @keyframes shake { 
+                0% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+                20%, 40%, 60%, 80% { transform: translateX(10px); }
+                100% { transform: translateX(0); }
+            }
+            
+            .jumbotron:hover {
+                animation: shake 4s linear infinite;
+             }  
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1 class="display-4">Uh No!</h1>
+            <p class="lead">There was a problem subscribing. Please try again later.</p>
+            <form action="/failure" method="post">
+            <buttton class="btn btn-lg btn-warning" type="submit" name="button">Try Again</buttton>
+            </form>
+        </div>
+    </body>
+</html>
