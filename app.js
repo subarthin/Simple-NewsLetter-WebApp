@@ -33,10 +33,10 @@ app.post('/',(req,res)=>{
     };
     var jsonData=JSON.stringify(data);
 
-    const url="https://us10.api.mailchimp.com/3.0/lists/64cf0b3fcb";
+    const url="https://us10.api.mailchimp.com/3.0/lists/dummy"; //listid
     const options={
         method:"POST",
-        auth:"subarthinraja:203d18923476999cf5d390f850725314-us10"
+        auth:"subarthinraja:dummy" //apikey
     }
     const request=https.request(url,options,function(response){
         if (response.statusCode===200){
@@ -63,5 +63,3 @@ app.listen(process.env.PORT || port,()=>{
     console.log("Server is running on port no. "+port);
 })
 
-//203d18923476999cf5d390f850725314-us10
-//64cf0b3fcb
